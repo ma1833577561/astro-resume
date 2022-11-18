@@ -1,15 +1,15 @@
 
 export default {
   useInfo: {
-    name: "阿崔1234",
+    name: "Extra",
     job: "前端工程师",
-    jobOld: "八年工作经验",
-    wx: "cuixr1314",
-    tel: "138138138138",
-    email: "your_email@123.com",
+    jobOld: "三年工作经验",
+    wx: "17516209705",
+    tel: "17516209705",
+    email: "17516209705@163.com",
     city: "Beijing",
-    picture: "https://avatars.githubusercontent.com/u/12064746?v=4",
-    gitHub: "http://github.com/cuixiaorui"
+    picture: "https://avatars.githubusercontent.com/u/47879832?v=4",
+    gitHub: "https://github.com/ma1833577561"
 
   },
   about: [
@@ -49,5 +49,5 @@ export default {
       ]
     }
   ],
-  skills: ["Vue3", "js", "ts", "react", "solidjs"],
+  skills: ["Vue3", "js", "ts", "react", "solidjs", "node"],
 };
