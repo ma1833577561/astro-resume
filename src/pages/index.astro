@@ -10,7 +10,7 @@ const { useInfo, about, experience, skills } = config;
 
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={`${useInfo.name} · ${useInfo.job}`}>
   <div class="mt-6 max-w-screen-lg md:flex mx-auto shadow-xl">
     <div class="md:w-1/3 p-2 relative">
       <div class="md:fixed">
@@ -25,38 +25,43 @@ const { useInfo, about, experience, skills } = config;
             <h1 class="text-lg text-gray-800 font-bold">{useInfo.name}</h1>
             <div class="md:text-base text-gray-600">{useInfo.job}</div>
             <div class="md:text-base text-gray-600">{useInfo.jobOld}</div>
-            <div class="text-gray-600 md:hidden mt-1">(wx: { useInfo.wx })</div>
+            {useInfo.wx && <div class="text-gray-600 md:hidden mt-1">(wx: {useInfo.wx})</div>}
           </div>
         </div>
         <div class="mx-4 my-4 hidden md:block">
-          <div class="my-5 text-base text-gray-600 flex">
-            <div class="mr-2">
-              <span class="iconfont icon-wechat"></span>
+          {useInfo.wx && (
+            <div class="my-5 text-base text-gray-600 flex">
+              <div class="mr-2">
+                <span class="iconfont icon-wechat"></span>
+              </div>
+              {useInfo.wx}
             </div>
-            { useInfo.wx }
-          </div>
-          <div class="my-5 text-base text-gray-600 flex">
-            <div class="mr-2">
-              <span class="iconfont icon-Phoneshouji"></span>
+          )}
+          {useInfo.tel && (
+            <div class="my-5 text-base text-gray-600 flex">
+              <div class="mr-2">
+                <span class="iconfont icon-Phoneshouji"></span>
+              </div>
+              {useInfo.tel}
             </div>
-            { useInfo.tel }
-          </div>
-          <div class="my-5 text-base text-gray-600 flex">
-            <div class="mr-2">
-              <span class="iconfont icon-email"></span>
+          )}
+          {useInfo.email && (
+            <div class="my-5 text-base text-gray-600 flex">
+              <div class="mr-2">
+                <span class="iconfont icon-email"></span>
+              </div>
+              {useInfo.email}
             </div>
-            { useInfo.email }
-          </div>
-          <div class="my-5 text-base text-gray-600 flex">
-            <div class="mr-2">
-              <span class="iconfont icon-position"></span>
+          )}
+          {useInfo.city && (
+            <div class="my-5 text-base text-gray-600 flex">
+              <div class="mr-2">
+                <span class="iconfont icon-position"></span>
+              </div>
+              {useInfo.city}
             </div>
-            { useInfo.city }
-          </div>
-          <a
-            href= "my-5 flex"
-            target="_blank"
-          >
+          )}
+          <a href={useInfo.gitHub} class="my-5 flex" target="_blank" rel="noopener">
             <div class="mr-2">
               <span class="iconfont icon-github"></span>
             </div>

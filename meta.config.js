@@ -1,12 +1,12 @@
 
 export default {
   useInfo: {
-    name: "Extra",
+    name: "马金栋",
     job: "前端工程师",
     jobOld: "三年工作经验",
-    wx: "17516209705",
-    tel: "17516209705",
-    email: "17516209705@163.com",
+    wx: "",
+    tel: "",
+    email: "1833577561@qq.com",
     city: "Beijing",
     picture: "https://avatars.githubusercontent.com/u/47879832?v=4",
     gitHub: "https://github.com/ma1833577561"
