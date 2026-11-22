@@ -1,6 +1,6 @@
 export default {
   useInfo: {
-    name: "extra&mjd",
+    name: "Extra",
     job: "高级前端工程师",
     jobOld: "七年工作经验",
     wx: "",
