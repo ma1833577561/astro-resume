@@ -32,6 +32,10 @@ npm run build    # 产物在 dist/（不提交，交给 CI 构建）
 
 ## 部署
 
+**先改一处**：`astro.config.mjs` 里的 `base: "astro-resume"` 写死的是这个仓库名。
+你的仓库如果叫别的（或者绑了自定义域名），把它改成你的仓库名（`/your-repo` 写法更稳），
+不改成自定义域名时，改成 `base: "/"`。
+
 推到 `main` 之后，`.github/workflows/static.yml` 会 `npm ci && npm run build`，
 再把 `dist/` 发布到 GitHub Pages。仓库 Settings → Pages 里把 Source 选成 **GitHub Actions** 即可。
 
